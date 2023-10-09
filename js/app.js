@@ -15,7 +15,7 @@
         
         if (restOf3 == 0 && restOf5 == 0) {
             // Passiamo il risultato sul console log
-            console.log(fizzBuzz);
+            console.log(n, fizzBuzz);
             // Creamo il box dentro grid 
                 // Creamo la div tramite "createElement" assegnando il valore alla variabile "boxDOMElement"
                 const boxDOMElement = document.createElement("div");
@@ -26,13 +26,13 @@
                 // Aggiungiamo il div alla nostra DOM
                 gridDOMElement.append(boxDOMElement);
         } else if (restOf3 == 0){
-            console.log(fizz);
+            console.log(n, fizz);
             const boxDOMElement = document.createElement("div");
             boxDOMElement.classList.add("box", "bg-success");
             boxDOMElement.innerHTML = fizz;
             gridDOMElement.append(boxDOMElement);
         } else if (restOf5 == 0){
-            console.log(buzz);
+            console.log(n, buzz);
             const boxDOMElement = document.createElement("div");
             boxDOMElement.classList.add("box", "bg-warning");
             boxDOMElement.innerHTML = buzz;
