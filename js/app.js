@@ -39,7 +39,6 @@
             gridDOMElement.append(boxDOMElement);
         } else {
             console.log(n);
-            console.log(fizz);
             const boxDOMElement = document.createElement("div");
             boxDOMElement.classList.add("box", "bg-dark-subtle");
             boxDOMElement.innerHTML = n;
