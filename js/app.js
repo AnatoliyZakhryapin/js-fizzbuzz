@@ -22,20 +22,20 @@
                 // Aggiungiamo il classe "box" e il "bg" in base al tipo di box 
                 boxDOMElement.classList.add("box", "bg-danger");
                 // Assegnamo il numero di box
-                boxDOMElement.innerHTML = n;
+                boxDOMElement.innerHTML = fizzBuzz;
                 // Aggiungiamo il div alla nostra DOM
                 gridDOMElement.append(boxDOMElement);
         } else if (restOf3 == 0){
             console.log(fizz);
             const boxDOMElement = document.createElement("div");
             boxDOMElement.classList.add("box", "bg-success");
-            boxDOMElement.innerHTML = n;
+            boxDOMElement.innerHTML = fizz;
             gridDOMElement.append(boxDOMElement);
         } else if (restOf5 == 0){
             console.log(buzz);
             const boxDOMElement = document.createElement("div");
             boxDOMElement.classList.add("box", "bg-warning");
-            boxDOMElement.innerHTML = n;
+            boxDOMElement.innerHTML = buzz;
             gridDOMElement.append(boxDOMElement);
         } else {
             console.log(n);
