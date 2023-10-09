@@ -9,40 +9,28 @@
         let n = i + 1;
         const restOf3 = n % 3;
         const restOf5 = n % 5;
+        let message = n + "";
+
         const gridDOMElement = document.querySelector(".grid");
-        
-        //     - Creazione di operatore logico
+        const boxDOMElement = document.createElement("div");
+        let classNameBase = "box";
+        let classNameBg = "bg-dark-subtle";
         
         if (restOf3 == 0 && restOf5 == 0) {
-            // Passiamo il risultato sul console log
-            console.log(fizzBuzz);
-            // Creamo il box dentro grid 
-                // Creamo la div tramite "createElement" assegnando il valore alla variabile "boxDOMElement"
-                const boxDOMElement = document.createElement("div");
-                // Aggiungiamo il classe "box" e il "bg" in base al tipo di box 
-                boxDOMElement.classList.add("box", "bg-danger");
-                // Assegnamo il numero di box
-                boxDOMElement.innerHTML = fizzBuzz;
-                // Aggiungiamo il div alla nostra DOM
-                gridDOMElement.append(boxDOMElement);
+            message = fizzBuzz;
+            classNameBg = "bg-danger";
         } else if (restOf3 == 0){
-            console.log(fizz);
-            const boxDOMElement = document.createElement("div");
-            boxDOMElement.classList.add("box", "bg-success");
-            boxDOMElement.innerHTML = fizz;
-            gridDOMElement.append(boxDOMElement);
+            message = fizz;
+            classNameBg = "bg-success";
         } else if (restOf5 == 0){
-            console.log(buzz);
-            const boxDOMElement = document.createElement("div");
-            boxDOMElement.classList.add("box", "bg-warning");
-            boxDOMElement.innerHTML = buzz;
-            gridDOMElement.append(boxDOMElement);
-        } else {
-            console.log(n);
-            const boxDOMElement = document.createElement("div");
-            boxDOMElement.classList.add("box", "bg-dark-subtle");
-            boxDOMElement.innerHTML = n;
-            gridDOMElement.append(boxDOMElement);
-        }
+            message = buzz;
+            classNameBg = "bg-warning"; 
+        } 
+
+        console.log(message);
+        boxDOMElement.innerHTML = message;
+        boxDOMElement.classList.add(classNameBase, classNameBg);
+        gridDOMElement.append(boxDOMElement);
     }
+    
     
